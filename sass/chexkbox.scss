@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body, html, div, ul, ol, li, p { margin: 0; padding: 0; }
+
+ul, ol, li { list-style: none; }
+
+body { background-color: #FFF0CB; line-height: 1; font-size: 12px; color: #813121; font-family: 'Helvetica','Droid Sans Fallback'; -webkit-tap-highlight-color: transparent; -webkit-overflow-scrolling: touch; }
+
+img { vertical-align: middle; display: inline-block; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-size: 100%; }
+
+input, a, button { -webkit-tap-highlight-color: transparent; }
+
+a:focus, input:focus, textarea:focus { -webkit-tap-highlight-color: transparent; outline: none; }
+
+a { text-decoration: none; font-size: 12px; }
+body{
+    padding: 20px;
+}
+
+label{
+    position: relative;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+//定义默认选择框
+input[type="checkbox"] + label::before {
+                    /* non-break space */
+    content: ''; /* 不换行空格 */
+    display: inline-block;
+//  vertical-align: .2em;
+//  width: .8em;
+//  height: .8em;
+//  margin-right: .2em;
+//  border-radius: .2em;
+//  background: silver;
+//  text-indent: .15em;
+//  line-height: .65;
+width: 20px;
+height: 20px;
+border-radius: 2px;
+background-color: silver;
+position: absolute;
+left: 0;
+top:-2px;
+line-height: 22px;
+text-align: center;
+font-size: 20px;
+color: #FFF;
+}
+
+
+input[type="checkbox"]:checked + label::before {
+    content: '\2713';
+    background: yellowgreen;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+input[type="checkbox"]:focus + label::before {
+//  box-shadow: 0 0 .1em .1em #58a;
+}
+
+input[type="checkbox"]:disabled + label::before {
+    background: gray;
+    box-shadow: none;
+    color: #555;
+}
